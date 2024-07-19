@@ -1,0 +1,40 @@
+{% extends 'base2.html' %}
+{% block body %}
+<div class="container">
+    <h2>Edit</h2>
+    <form action="/edit/{{real.sno}}" method="POST">
+        <div class="mb-3">
+            <label for="Resource_Name" class="form-label">Resource Name</label>
+            <input type="text" name="Resource_Name" class="form-control" value='{{real.Resource_Name}}' id="Resource_Name" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="Task_Asigned" class="form-label">Task Asigned</label>
+            <input type="text" name="Task_Asigned" class="form-control" value='{{real.Task_Asigned}}' id="Task_Asigned">
+        </div>
+        <div class="mb-3">
+            <label for="Start_Date" class="form-label">Start_Date</label>
+            <input type="date" name="Start_Date" class="form-control" value='{{real.Start_Date}}' id="Start_Date">
+        </div>
+        <div class="mb-3">
+            <label for="End_Date" class="form-label">End_Date</label>
+            <input type="date" name="End_Date" class="form-control" value='{{real.End_Date}}' id="End_Date">
+        </div>
+        <div class="mb-3">
+            <label for="Status" class="form-label">Status</label>
+            <input type="text" name="Status" class="form-control" value='{{real.Status}}' id="Status">
+        </div>
+        <div class="mb-3">
+            <label for="Phone" class="form-label">Phone</label>
+            <input type="tel" name="Phone" class="form-control" value='{{real.Phone}}' id="Phone" pattern="[789][0-9]{9}">
+        </div>
+        <div class="mb-3">
+            <label for="Email" class="form-label">E-mail</label>
+            <input type="Email" name="Email" class="form-control" value='{{real.Email}}' id="Email">
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    {% endblock body %}

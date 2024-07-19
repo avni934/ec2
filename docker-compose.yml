@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8010:8010"
+    environment:
+      - FLASK_ENV=development
+      - MAIL_SERVER=smtp.gmail.com
+      - MAIL_PORT=465
+      - MAIL_USERNAME=avni.jain2022@vitstudent.ac.in
+      - MAIL_PASSWORD=$iA9z05cuI
+      - MAIL_USE_TLS=False
+      - MAIL_USE_SSL=True
+      - MAIL_DEBUG=True
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+
+  db:
+    image: nouchka/sqlite3
+    volumes:
+      - ./instance:/data
+    command: ["tail", "-f", "/dev/null"]

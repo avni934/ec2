@@ -1,0 +1,38 @@
+{% extends 'base2.html' %}
+{% block body %}
+<div class="container">
+    <h2>Add Records</h2>
+    <form action="/add" method="POST">
+        <div class="mb-3">
+            <label for="Resource_Name" class="form-label">Resource Name</label>
+            <input type="text" name="Resource_Name" class="form-control" id="Resource_Name" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="Task_Asigned" class="form-label">Task Asigned</label>
+            <input type="text" name="Task_Asigned" class="form-control" id="Task_Asigned">
+        </div>
+        <div class="mb-3">
+            <label for="Start_Date" class="form-label">Start_Date</label>
+            <input type="date" name="Start_Date" class="form-control" id="Start_Date">
+        </div>
+        <div class="mb-3">
+            <label for="End_Date" class="form-label">End_Date</label>
+            <input type="date" name="End_Date" class="form-control" id="End_Date">
+        </div>
+        <div class="mb-3">
+            <label for="Status" class="form-label">Status</label>
+            <input type="text" name="Status" class="form-control" id="Status">
+        </div>
+        <div class="mb-3">
+            <label for="Phone" class="form-label">Phone</label>
+            <input type="tel" name="Phone" class="form-control" id="Phone" pattern="[789][0-9]{9}">
+        </div>
+        <div class="mb-3">
+            <label for="Email" class="form-label">E-mail</label>
+            <input type="Email" name="Email" class="form-control" id="Email">
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>
+{% endblock body %}
+ChatGPT
